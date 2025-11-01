@@ -22,6 +22,7 @@ import {
   ArrowUpDown,
   PieChart,
   FileBarChart,
+  LogOut,
 } from "lucide-react";
 import logoOle from "@/assets/logo-ole-erp.png";
 import {
@@ -40,6 +41,8 @@ import {
 } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 const menuItems = [
   {
@@ -105,8 +108,14 @@ const menuItems = [
 
 export function AppSidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const { open } = useSidebar();
   const [openGroups, setOpenGroups] = useState<string[]>([]);
+
+  const handleLogout = () => {
+    toast.success('Logout realizado com sucesso!');
+    navigate('/login');
+  };
 
   const toggleGroup = (title: string) => {
     setOpenGroups(prev =>
@@ -194,6 +203,17 @@ export function AppSidebar() {
                 </SidebarMenuItem>
               );
             })}
+          </SidebarMenu>
+        </SidebarGroup>
+
+        <SidebarGroup className="mt-auto">
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton onClick={handleLogout} className="text-red-600 hover:text-red-700 hover:bg-red-50">
+                <LogOut className="h-4 w-4" />
+                {open && <span>Sair</span>}
+              </SidebarMenuButton>
+            </SidebarMenuItem>
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
