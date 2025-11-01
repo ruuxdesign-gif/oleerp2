@@ -1,73 +1,44 @@
-# Welcome to your Lovable project
+# Olé ERP — Soluções de Provedores
 
-## Project info
+Plataforma completa de gestão para provedores de internet (ISP). Organize clientes, faturamento, suporte, operações e relatórios em um único lugar.
 
-**URL**: https://lovable.dev/projects/3d14ace3-66be-4f90-85fe-6580abe38397
+## Recursos
+- Dashboard com indicadores operacionais
+- Gestão de clientes e contratos
+- Financeiro e faturamento
+- Suporte e abertura de chamados
+- Relatórios e métricas
+- Controle de acesso e permissões
+- Integrações (extensível)
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3d14ace3-66be-4f90-85fe-6580abe38397) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Como rodar localmente
+Pré‑requisitos: Node.js LTS e npm instalados.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+# Instalar dependências
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Rodar em desenvolvimento
 npm run dev
+
+# Build de produção
+npm run build
+
+# Visualizar o build localmente
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## Estrutura e Branding
+- Favicon/Logo: `public/ole-erp-logo.svg`
+- Metadados (título, descrição e imagens de compartilhamento): `index.html`
+- Configuração Vite/React/TypeScript: `vite.config.ts`, `tsconfig*.json`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deploy (Vercel)
+- Root Directory: `oleerp`
+- Build Command: `npm run build`
+- Output Directory: `dist`
 
-**Use GitHub Codespaces**
+Ao fazer push para a branch principal, a Vercel realiza o deploy automaticamente.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3d14ace3-66be-4f90-85fe-6580abe38397) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Suporte
+Para dúvidas e melhorias, abra uma issue no repositório ou entre em contato com a equipe Olé ERP.
